@@ -2,47 +2,45 @@
 <html class="page">
     <head class="page__head">
         <meta charset="utf-8">
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/style.css">
         <title>Mishka</title>
     </head>
     <body class="page__body">
         <header class="page-header">
             <nav class="main-nav">                
                 <a class="page-header__logo" href="#">
-                    <img alt="Mishka">
+                    <img src="img/logo-desktop.svg" alt="Mishka">
                 </a>
                 <button class="main-nav__toggle" type="button">
-                    <span class="visually-hidden">Открыть меню</span>
+                    <span>Открыть меню</span>
                 </button>
-                <ul class="main-nav__list site-list">
-                    <li  class="site-list__item"><a href="#">Каталог товаров</a></li>
-                    <li  class="site-list__item"><a href="#">Вязание на заказ</a></li>
-                    <li  class="site-list__item"><a href="#">Каталог товаров</a></li>
+                <ul class="main-nav__list">
+                    <li  class="main-nav__item"><a href="#">Каталог товаров</a></li>
+                    <li  class="main-nav__item"><a href="#">Вязание на заказ</a></li>
                 </ul>
                 <form class="main-nav__search">
                     <button class="button search-button" type="submit">Найти</button>
+                    <span class="main-nav__span">Поиск по сайту</span>
                 </form>
-                <ul class="main-nav__list shop-list">
-                    <li class="shop-list__item">
-                        <a>Корзина: пока пуста</a>
+                <ul class="main-nav__list">
+                    <li class="main-nav__item">
+                        <a href="#">Корзина: пока пуста</a>
+                    </li>
+                </ul>
+                <ul class="main-nav__list main-nav__list--table main-nav__list--mobile">
+                    <li class="main-nav__item"><a href="#">Новые поступления</a></li>
+                    <li class="main-nav__item"><a href="#">Распродажа</a></li>
+                </ul>
+                <ul class="main-nav__list main-nav__list--mobile">
+                    <li class="main-nav__item main-nav__free-delivery">
+                        <a href="#">Бесплатная доставка по России</a>
                     </li>
                 </ul>
             </nav>
         </header>
 
         <main class="page-main">
-            <section class="head">
-                <nav class="head__goods">
-                    <ul class="head__list">
-                        <li class="head__item"><a href="#">Новые поступления</a></li>
-                        <li class="head__item"><a href="#">Распродажа</a></li>
-                    </ul>
-                    <ul class="head__delivery">
-                        <li class="head__item head__free-delivery">
-                            <a href="#">Бесплатная доставка по России</a>
-                        </li>
-                    </ul>
-                </nav>
+            <section class="head">                
                 <h1 class="page-main__title">Милые штуки ручной работы для дома</h1>
                 <nav class="head__thing">
                     <ul class="head__list">

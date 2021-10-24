@@ -1,0 +1,89 @@
+$dector-width: 1200px;
+$table-width: 768px;
+$mobile-width-only: 767px;
+
+
+@font-face{
+    font-family: "OpenSans";
+    font-style: normal;
+    font-display: swap;
+    font-weight: normal;
+    src:
+        url("../fonts/opensans.woff2") format("woff2"),
+        url("../fonts/opensans.woff") format("woff");
+}
+
+@font-face {
+    font-family: "OpenSansBold";
+    font-style: normal;
+    font-display: swap;
+    font-weight: normal;    
+    src:
+        url("../fonts/opensansbold.woff2") format("woff2"),
+        url("../fonts/opensansbold.woff") format("woff");
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0)
+}
+
+.page{
+    font-family: "OpenSansBold", Arial, sans-serif;
+    height: 100%;
+    font-size: 17px;
+    line-height: 27px;
+}
+
+.page-body{
+    min-height: 100%;
+    margin: 0;
+}
+
+//Навигация
+.main-nav{    
+    line-height: 24px;
+}
+
+@media(min-height: $table-width){
+    .main-nav{
+        display: flex;
+        justify-content: space-between;
+        width: 668px;
+        margin: 0 auto;
+    }
+}
+
+.main-nav__list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.main-nav__list a{
+    color: #000000;
+}
+
+.main-nav__list--mobile{
+    @media(max-width: $mobile-width-only){
+        display: none;
+    }
+}
+
+//Main
+
+.page-main__title{
+    margin: 0;
+    padding: 0;
+}
+
+.head__list{
+    margin: 0;
+    padding: 0;
+}
