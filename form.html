@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html class="page">
+    <head class="page__head">
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/main.css">
+        <title>Mishka</title>
+    </head>
+    <body class="page__body">
+        <header class="page-header">
+            <nav class="main-nav">                
+                <a class="page-header__logo" href="#">
+                    <img alt="Mishka">
+                </a>
+                <button class="main-nav__toggle" type="button">
+                    <span class="visually-hidden">Открыть меню</span>
+                </button>
+                <ul class="main-nav__list site-list">
+                    <li  class="site-list__item"><a href="#">Каталог товаров</a></li>
+                    <li  class="site-list__item"><a href="#">Вязание на заказ</a></li>
+                    <li  class="site-list__item"><a href="#">Каталог товаров</a></li>
+                </ul>
+                <form class="main-nav__search">
+                    <button class="button search-button" type="submit">Найти</button>
+                </form>
+                <ul class="main-nav__list shop-list">
+                    <li class="shop-list__item">
+                        <a>Корзина: пока пуста</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="page-main">
+            <section class="head">
+                <nav class="head__goods">
+                    <ul class="head__list">
+                        <li class="head__item"><a href="#">Новые поступления</a></li>
+                        <li class="head__item"><a href="#">Распродажа</a></li>
+                    </ul>
+                    <ul class="head__delivery">
+                        <li class="head__item head__free-delivery">
+                            <a href="#">Бесплатная доставка по России</a>
+                        </li>
+                    </ul>
+                </nav>
+                <h1 class="page-main__title">Вязание на заказ</h1>
+            </section>
+            <form class="form">
+                <fieldset class="form__group">
+                    <legend class="form__hidden">Тип</legend>
+                    <ul class="form__list">
+                        <li class="form__item">
+                            <input class="form__radio" type="radio" name="radio" id="form__radio-1" checked>
+                            <label class="form__label" for="form__radio-1">
+                                Аксессуары для интерьера
+                            </label>
+                        </li>
+                        <li class="form__item">
+                            <input class="form__radio" type="radio" name="radio" id="form__radio-2">
+                            <label class="form__label" for="form__radio-2">
+                                Детская игрушка
+                            </label>
+                        </li>
+                    </ul>
+                </fieldset>
+                <fieldset class="form__group">
+                    <legend class="form__hidden">Цвет</legend>
+                    <ul class="form__list">
+                        <li class="form__item">
+                            <input class="form__checkbox" type="checkbox" name="white" id="form__white">
+                            <label class="form__label" for="form__white">Белый</label>
+                        </li>
+                        <li class="form__item">
+                            <input class="form__checkbox" type="checkbox" name="gray" id="form__gray">
+                            <label class="form__label" for="form__gray">Серый</label>
+                        </li>
+                        <li class="form__item">
+                            <input class="form__checkbox" type="checkbox" name="tiffany" id="form__tiffany">
+                            <label class="form__label" for="form__tiffany">«Тиффани»</label>
+                        </li>
+                        <li class="form__item">
+                            <input class="form__checkbox" type="checkbox" name="black" id="form__black">
+                            <label class="form__label" for="form__black">Чёрный</label>
+                        </li>
+                        <li class="form__item">
+                            <input class="form__checkbox" type="checkbox" name="pink" id="form__pink">
+                            <label class="form__label" for="form__pink">Розовый</label>
+                        </li>
+                        <li class="form__item">
+                            <input class="form__checkbox" type="checkbox" name="orange" id="form__orange">
+                            <label class="form__label" for="form__orange">Оранжевый</label>
+                        </li>
+                    </ul>
+                </fieldset>
+                <fieldset class="form__group">
+                    <legend class="form__hidden">ФИО</legend>
+                    <ul class="form__list">
+                        <li class="form__item">                            
+                            <label class="form__label" for="form__user-name">Имя:</label>
+                            <input class="form__text" id="form__user-name" type="text" name="form__user-name" placeholder="Введите ваше имя*">
+                        </li>
+                        <li class="form__item">
+                            <label class="form__label" for="form__user-surname">Фамилия:</label>
+                            <input class="form__text" id="form__user-surname" type="text" name="form__user-surname" placeholder="Укажите фамилию*">
+                        </li>
+                        <li class="form__item">
+                            <label class="form__label" for="form__user-patronymic">Отчество:</label>
+                            <input class="form__text" id="form__user-patronymic" type="text" name="form__user-patronymic" placeholder="Отчество, если желаете">
+                        </li>
+                    </ul>
+                </fieldset>
+                <fieldset class="form__group">
+                    <legend class="form__hidden">Тел</legend>                  
+                    <ul class="form__list">
+                        <li class="form__item">
+                            <input class="form__text" type="tel" name="form__tel" placeholder="+7 XXX XX XX*">
+                        </li>
+                    </ul>                    
+                    <legend class="form__hidden">e-mail</legend>
+                    <ul class="form__list">
+                        <li class="form__item">
+                            <input class="form__text" type="email" name="form__email" placeholder="Ваш email*">
+                        </li>
+                    </ul>
+                </fieldset>
+                <fieldset class="form__group">
+                    <legend class="form__hidden">Доп</legend>
+                    <ul class="form__list">
+                        <li class="form__item">
+                            <textarea class="form__textarea" name="form__textarea" cols="30" rows="10" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+                        </li>
+                    </ul>
+                </fieldset>
+                <button class="button form-button" type="submit">Отправить заказ</button>
+                <span class="form__span">*Поля обязательные для заполнения</span>
+            </form>
+        </main>
+
+        <footer class="page-footer">
+            <nav class="page-footer__nav footer-nav">
+                <a class="footer-nav__logo logo__tiggle" href="#">
+                    <img alt="Mishka">
+                </a>
+                <ul class="footer-nav__nav">
+                    <li class="footer-nav__item">
+                        <a href="#"><img alt="Insta">Instagram</a>
+                    </li>
+                    <li class="footer-nav__item">
+                        <a href="#"><img alt="FaceBook">FaceBook</a>
+                    </li>
+                    <li class="footer-nav__item">
+                        <a href="#"><img alt="twitter">Twitter</a>
+                    </li>
+                </ul>
+                <ul class="footer-nav__nav">
+                    <li class="footer-nav__item"><a href="#">Разрабоатно</a></li>
+                </ul>
+            </nav>
+        </footer>
+    </body>
+</html>
