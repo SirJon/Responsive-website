@@ -7,32 +7,39 @@
     </head>
     <body class="page__body">
         <header class="page-header">
-            <nav class="main-nav">                
-                <a class="page-header__logo" href="#">
-                    <img src="img/logo-desktop.svg" alt="Mishka">
-                </a>
-                <button class="main-nav__toggle" type="button">
-                    <span>Открыть меню</span>
-                </button>
-                <ul class="main-nav__list">
-                    <li  class="main-nav__item"><a href="#">Каталог товаров</a></li>
-                    <li  class="main-nav__item"><a href="#">Вязание на заказ</a></li>
-                </ul>
-                <form class="main-nav__search">
-                    <button class="button search-button" type="submit">Найти</button>
-                    <span class="main-nav__span">Поиск по сайту</span>
-                </form>
-                <ul class="main-nav__list">
-                    <li class="main-nav__item">
+            <nav class="main-nav">
+                <ul class="main-nav__list">                    
+                    <li class="main-nav__item main-nav__item--catalog">
+                        <a href="#">Каталог товаров</a>
+                    </li>
+                    <li class="main-nav__item main-nav__item--order">
+                        <a href="#">Вязание на заказ</a>
+                    </li>
+                    <li class="main-nav__item main-nav__item--logo">
+                        <a class="page-header__logo" href="#">
+                            <picture>
+                                <source media="(min-width: 768px)" srcset="img/logo-desktop.svg">
+                                <img src="img/logo-mobile.svg" alt="Mishka">
+                            </picture>
+                        </a>
+                        <button class="main-nav__toggle" type="button">
+                            <span>Открыть меню</span>
+                        </button>
+                    </li>
+                    <li class="main-nav__item main-nav__item--search">
+                        <button class="button search-button" type="submit">Найти</button>
+                        <span class="main-nav__span">Поиск по сайту</span>
+                    </li>
+                    <li class="main-nav__item main-nav__item--basket">
                         <a href="#">Корзина: пока пуста</a>
                     </li>
-                </ul>
-                <ul class="main-nav__list main-nav__list--table main-nav__list--mobile">
-                    <li class="main-nav__item"><a href="#">Новые поступления</a></li>
-                    <li class="main-nav__item"><a href="#">Распродажа</a></li>
-                </ul>
-                <ul class="main-nav__list main-nav__list--mobile">
-                    <li class="main-nav__item main-nav__free-delivery">
+                    <li class="main-nav__item main-nav__item--new main-nav__item--mobile main-nav__item--table">
+                        <a href="#">Новые поступления</a>
+                    </li>
+                    <li class="main-nav__item main-nav__item--sale main-nav__item--mobile main-nav__item--table">
+                        <a href="#">Распродажа</a>
+                    </li>
+                    <li class="main-nav__item main-nav__item--delivery main-nav__item--mobile">
                         <a href="#">Бесплатная доставка по России</a>
                     </li>
                 </ul>
@@ -54,8 +61,8 @@
                 </nav>
             </section>
             <section class="products-week">
-                <h2 class="products-week__title">Вязаные корзинки</h2>
-                <span class="products-week__info">Товар недели</span>                
+                <h2 class="products-week__title title-section">Вязаные корзинки</h2>
+                <span class="products-week__info">Товар недели</span>
                 <p class="products-week__description">
                     Экологически чистая пряжа, 
                     ручная работа. Доступны в шести 
@@ -75,12 +82,12 @@
                         <td class="products-week__section">15 см</td>
                     </tr>
                 </table>
-                <img class="products-week__img" alt="Товар недели">
+                <img src="img/knitted-baskets-tablet.jpg" class="products-week__img" alt="Товар недели" width="334px" height="406">
                 <span class="products-week__cost">Цена: 990 руб.</span>
                 <button class="products-week__button button">Заказать</button>
             </section>
             <section class="about-us">
-                <h2 class="about-us__title">Коротко о нас:</h2>
+                <h2 class="about-us__title title-section">Коротко о нас:</h2>
                 <ul class="about-us__list">
                     <li class="about-us__item">
                         <span class="about-us__span about-us__span--flower">Экологически чистые материалы</span>
@@ -103,25 +110,24 @@
                 </ul>
             </section>
             <section class="reviews">
-                <div class="reviews__list slide__list">
-                    <h2 class="reviews__title">Отзывы</h2>
-                    <blockquote class="reviews__quote">
-                        Я молодая мама, но всё равно фотографии не набирали и близко такого 
-                        количества лайков, как у популярных инстамамочек. В отчаянии, 
-                        я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более 
-                        стильными, а также набирают больше лайков!
-                    </blockquote>
-                    <cite class="reviews__name">Анастасия Красильникова</cite>
-                    <a class="reviews__inst-name" href="#">@misssssiskras</a>
-                    <div class="reviews__leaf-through">
-                        <button class="reviews__prev button" type="button">Стрелочка влево</button>
-                        <button class="reviews__next button" type="button">Стрелочка вправо</button>
-                    </div>
-                    <a class="reviews__write-reviews button" href="#">Написать</a>                
+                <h2 class="reviews__title title-section">Отзывы</h2>
+                <blockquote class="reviews__quote">
+                    Я молодая мама, но всё равно фотографии не набирали и близко такого 
+                    количества лайков, как у популярных инстамамочек. В отчаянии, 
+                    я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более 
+                    стильными, а также набирают больше лайков!
+                </blockquote>
+                <cite class="reviews__name">Анастасия Красильникова</cite>
+                <a class="reviews__inst-name" href="#">@misssssiskras</a>
+                <div class="reviews__leaf-through">
+                    <button class="reviews__prev button" type="button">Стрелочка влево</button>
+                    <button class="reviews__next button" type="button">Стрелочка вправо</button>
                 </div>
+                <a class="reviews__write-reviews button" href="#">Написать</a>
             </section>
             <section class="contacts">
                 <h2 class="contacts__title">Контакты</h2>
+                <img class="contacts__img" alt="Флаг">
                 <dl class="contacts__list">
                     <div class="contacts__item">
                         <dt class="contacts__feature">email:</dt>
@@ -145,22 +151,22 @@
 
         <footer class="page-footer">
             <nav class="page-footer__nav footer-nav">
-                <a class="footer-nav__logo logo__tiggle" href="#">
+                <a class="footer-nav__logo" href="#">
                     <img alt="Mishka">
                 </a>
                 <ul class="footer-nav__nav">
                     <li class="footer-nav__item">
-                        <a href="#"><img alt="Insta">Instagram</a>
+                        <a href="#"><img alt="instagram">Instagram</a>
                     </li>
                     <li class="footer-nav__item">
-                        <a href="#"><img alt="FaceBook">FaceBook</a>
+                        <a href="#"><img alt="facebook">FaceBook</a>
                     </li>
                     <li class="footer-nav__item">
                         <a href="#"><img alt="twitter">Twitter</a>
                     </li>
                 </ul>
                 <ul class="footer-nav__nav">
-                    <li class="footer-nav__item"><a href="#">Разрабоатно</a></li>
+                    <li class="footer-nav__item"><a href="#">Разработано</a></li>
                 </ul>
             </nav>
         </footer>

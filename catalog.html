@@ -2,29 +2,45 @@
 <html class="page">
     <head class="page__head">
         <meta charset="utf-8">
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/style.css">
         <title>Mishka</title>
     </head>
     <body class="page__body">
         <header class="page-header">
-            <nav class="main-nav">                
-                <a class="page-header__logo" href="#">
-                    <img alt="Mishka">
-                </a>
-                <button class="main-nav__toggle" type="button">
-                    <span class="visually-hidden">Открыть меню</span>
-                </button>
-                <ul class="main-nav__list site-list">
-                    <li  class="site-list__item"><a href="#">Каталог товаров</a></li>
-                    <li  class="site-list__item"><a href="#">Вязание на заказ</a></li>
-                    <li  class="site-list__item"><a href="#">Каталог товаров</a></li>
-                </ul>
-                <form class="main-nav__search">
-                    <button class="button search-button" type="submit">Найти</button>
-                </form>
-                <ul class="main-nav__list shop-list">
-                    <li class="shop-list__item">
-                        <a>Корзина: пока пуста</a>
+            <nav class="main-nav">
+                <ul class="main-nav__list">                    
+                    <li class="main-nav__item main-nav__item--catalog">
+                        <a href="#">Каталог товаров</a>
+                    </li>
+                    <li class="main-nav__item main-nav__item--order">
+                        <a href="#">Вязание на заказ</a>
+                    </li>
+                    <li class="main-nav__item main-nav__item--logo">
+                        <a class="page-header__logo" href="#">
+                            <picture>
+                                <source media="(min-width: 768px)" srcset="img/logo-desktop.svg">
+                                <img src="img/logo-mobile.svg" alt="Mishka">
+                            </picture>
+                        </a>
+                        <button class="main-nav__toggle" type="button">
+                            <span>Открыть меню</span>
+                        </button>
+                    </li>
+                    <li class="main-nav__item main-nav__item--search">
+                        <button class="button search-button" type="submit">Найти</button>
+                        <span class="main-nav__span">Поиск по сайту</span>
+                    </li>
+                    <li class="main-nav__item main-nav__item--basket">
+                        <a href="#">Корзина: пока пуста</a>
+                    </li>
+                    <li class="main-nav__item main-nav__item--new main-nav__item--mobile main-nav__item--table">
+                        <a href="#">Новые поступления</a>
+                    </li>
+                    <li class="main-nav__item main-nav__item--sale main-nav__item--mobile main-nav__item--table">
+                        <a href="#">Распродажа</a>
+                    </li>
+                    <li class="main-nav__item main-nav__item--delivery main-nav__item--mobile">
+                        <a href="#">Бесплатная доставка по России</a>
                     </li>
                 </ul>
             </nav>
@@ -32,17 +48,6 @@
 
         <main class="page-main">
             <section class="head">
-                <nav class="head__goods">
-                    <ul class="head__list">
-                        <li class="head__item"><a href="#">Новые поступления</a></li>
-                        <li class="head__item"><a href="#">Распродажа</a></li>
-                    </ul>
-                    <ul class="head__delivery">
-                        <li class="head__item head__free-delivery">
-                            <a href="#">Бесплатная доставка по России</a>
-                        </li>
-                    </ul>
-                </nav>
                 <h1 class="page-main__title">Каталог товаров</h1>
             </section>
 
@@ -78,7 +83,7 @@
                 </dl>                
             </section>
             <section class="manual">
-                <video class="manual__video">
+                <video class="manual__video" aria-label="video">
                     <source src="#">
                 </video>
                 <h2 class="manual__title">Процесс производства</h2>
