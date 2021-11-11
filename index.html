@@ -6,41 +6,44 @@
         <title>Mishka</title>
     </head>
     <body class="page__body">
-        <header class="page-header">
-            <nav class="main-nav">
+        <header class="header">
+            <nav class="main-nav main-nav--close main-nav--nojs">
                 <ul class="main-nav__list">                    
-                    <li class="main-nav__item main-nav__item--catalog">
-                        <a href="#">Каталог товаров</a>
+                    <li class="main-nav__item main-nav__item--catalog main-nav__item--hide">
+                        <a class="main-nav__link" href="#">Каталог товаров</a>
                     </li>
-                    <li class="main-nav__item main-nav__item--order">
-                        <a href="#">Вязание на заказ</a>
+                    <li class="main-nav__item main-nav__item--order main-nav__item--hide">
+                        <a class="main-nav__link" href="#">Вязание на заказ</a>
                     </li>
                     <li class="main-nav__item main-nav__item--logo">
-                        <a class="page-header__logo" href="#">
+                        <a class="main-nav__link main-nav__link--logo" href="#">
                             <picture>
                                 <source media="(min-width: 768px)" srcset="img/logo-desktop.svg">
                                 <img src="img/logo-mobile.svg" alt="Mishka">
                             </picture>
                         </a>
-                        <button class="main-nav__toggle" type="button">
-                            <span>Открыть меню</span>
+                        <button class="main-nav__toggle button" type="button">
+                            <span class="visually-hidden">Открыть меню</span>
                         </button>
                     </li>
-                    <li class="main-nav__item main-nav__item--search">
-                        <button class="button search-button" type="submit">Найти</button>
-                        <span class="main-nav__span">Поиск по сайту</span>
+                    <li class="main-nav__item main-nav__item--search main-nav__item--hide">
+                        <a class="main-nav__link" href="#">
+                            <span class="main-nav__span--search">
+                                Поиск по сайту
+                            </span>
+                        </a>
                     </li>
-                    <li class="main-nav__item main-nav__item--basket">
-                        <a href="#">Корзина: пока пуста</a>
+                    <li class="main-nav__item main-nav__item--basket main-nav__item--hide">
+                        <a class="main-nav__link" href="#">Корзина: пока пуста</a>
                     </li>
                     <li class="main-nav__item main-nav__item--new main-nav__item--mobile main-nav__item--table">
-                        <a href="#">Новые поступления</a>
+                        <a class="main-nav__link" href="#">Новые поступления</a>
                     </li>
                     <li class="main-nav__item main-nav__item--sale main-nav__item--mobile main-nav__item--table">
-                        <a href="#">Распродажа</a>
+                        <a class="main-nav__link" href="#">Распродажа</a>
                     </li>
                     <li class="main-nav__item main-nav__item--delivery main-nav__item--mobile">
-                        <a href="#">Бесплатная доставка по России</a>
+                        <a class="main-nav__link" href="#">Бесплатная доставка по России</a>
                     </li>
                 </ul>
             </nav>
@@ -171,4 +174,5 @@
             </nav>
         </footer>
     </body>
+    <script src="js/script.js"></script>
 </html>

@@ -1,0 +1,115 @@
+.products-week{
+    margin: 0 auto;
+    padding: 0 30px;
+    width: 260px;
+    @media(min-width: $table-width){
+        width: 668px;        
+        margin: 0 auto;        
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "title info"
+        "description img"
+        "tablee img"
+        "cost img"
+        "button img";
+    }
+
+    @media(min-width: $dector-width){
+        width: 1050px;
+        margin: 0 auto;
+        padding: 0 50px;
+        grid-template-columns: minmax(auto, 175px) minmax(auto, 350px) minmax(auto, 525px);
+        grid-template-areas: 
+        "info title img"
+        ". description img"
+        ". tablee img"
+        ". cost img"
+        ". button img";
+    }
+}
+
+.title-section{
+    font-size: 25px;
+    line-height: 30px;
+    @media(min-width: $table-width){
+        font-size: 43px;
+        line-height: 50px;
+    }
+    @media(min-width: $dector-width){
+        font-size: 53px;
+        line-height: 57px;
+    }
+}
+
+.products-week__title{
+    grid-area: title; 
+    margin: 0;
+    padding: 0;
+}
+
+.products-week__info{
+    grid-area: info;
+    padding: 0;
+    margin: 0;
+    font-size: 17px;
+    line-height: 17px;
+    text-transform: uppercase;
+    color: #63d1bb;
+}
+
+.products-week__description{
+    grid-area: description;
+    padding: 0;
+    margin: 0;
+    font-family: "OpenSansBold", Arial, sans-serif;
+    font-size: 15px;
+    line-height: 24px;
+    @media(min-width: $table-width){
+        font-size: 17px;
+        line-height: 30px;
+    }
+}
+
+.products-week__table{
+    grid-area: tablee;
+    padding: 0;
+    margin: 0;
+    font-family: "OpenSansBold", Arial, sans-serif;
+    font-size: 15px;
+    line-height: 20px;
+    @media(min-width: $table-width){
+        font-size: 17px;
+        line-height: 30px;
+    }
+}
+
+.products-week__img{
+    grid-area: img;
+    padding: 0;
+    margin: 0;
+}
+
+.products-week__cost{
+    grid-area: cost;
+    padding: 0;
+    margin: 0;
+    @media(max-width: $mobile-width-only){
+        display: block;
+    }
+    font-size: 17px;
+    line-height: 24px;
+    @media(min-width: $table-width){
+        font-size: 20px;
+        line-height: 24px;
+    }
+}
+
+.products-week__button{
+    grid-area: button;
+    padding: 0;
+    margin: 0;
+    font-size: 17px;
+    line-height: 20px;
+    text-transform: uppercase;
+}

@@ -1,0 +1,60 @@
+.manual{    
+    width: 260px;
+    margin: 0 auto;
+    padding: 0 30px;
+    display: grid;
+    grid-template-areas:
+        "title"
+        "video"
+        "manual__text"
+        "button";
+    @media(min-width: $table-width){
+        width: 668px;
+        grid-template-areas:
+            "video"
+            "title"
+            "manual__text"
+            "button";
+        
+    }
+    @media(min-width: $dector-width){
+        width: 1050px;
+        grid-template-areas:
+            "video title"
+            "video manual__text"
+            "video button";
+    }
+}
+
+.manual__video{
+    grid-area: video;
+    background-color: #000000;
+}
+
+.manual__title{
+    grid-area: title;    
+    font-size: 17px;
+    line-height: 24px;
+    @media(min-width: $table-width){
+        font-size: 20px;
+        line-height: 24px;
+    }
+}
+
+.manual__text{
+    grid-area: manual__text;    
+    font-size: 13px;
+    line-height: 24px;
+    font-family: "OpenSans", Arial, sans-serif;
+    @media(min-width: $table-width){
+        font-size: 15px;
+        line-height: 30px;
+    }
+}
+
+.manual__button{
+    grid-area: button;
+    text-transform: uppercase;    
+    font-size: 17px;
+    line-height: 16px;
+}

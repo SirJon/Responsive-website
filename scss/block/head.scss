@@ -1,0 +1,52 @@
+.head{
+    width: 320px;
+    margin: 0 auto;
+    padding: 0;
+    @media(min-width: $table-width){
+        width: 668px;
+        margin: 0 auto;
+    }
+
+    @media(min-width: $dector-width){
+        width: 1050px;
+        margin: 0 auto;
+    }
+}
+
+.page-main__title{
+    margin: 0;
+    padding: 0;
+    font-size: 27px;
+    line-height: 30px;
+    @media(min-width: $table-width){
+        font-size: 43px;
+        line-height: 50px;
+    }
+    @media(min-width: $dector-width){
+        font-size: 53px;
+        line-height: 57px;
+    }
+}
+
+.head__list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    @media(min-width: $table-width){
+        display: flex;
+    }
+}
+
+.head__item{
+    font-size: 19px;
+    line-height: 24px;
+    @media(min-width: $table-width){
+        font-size: 20px;
+        line-height: 30px;
+    }
+}
+
+.head__item a{
+    color: #000000;
+    text-decoration: none;
+}

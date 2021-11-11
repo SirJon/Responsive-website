@@ -1,0 +1,37 @@
+.about-us{
+    margin: 0 auto;
+    padding: 0 30px;
+    @media(max-width: $mobile-width-only){
+        width: 260px;
+    }
+    @media(min-width: $table-width){
+        width: 668px;
+    }
+    @media(min-width: $dector-width){
+        width: 700px;
+    }
+}
+
+.about-us__title{
+    margin: 0;
+    padding: 0;
+}
+
+.about-us__list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    @media(min-width: $table-width){
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.about-us__span{
+    font-size: 17px;
+    line-height: 20px;
+    @media(min-width: $table-width){
+        font-size: 20px;
+        line-height: 22px;
+    }
+}

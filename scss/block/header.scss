@@ -1,0 +1,198 @@
+.header{
+    min-width: 260px;
+}
+
+.main-nav{
+    @media(min-width: $table-width){
+        width: 768px;
+        margin: 0 auto;
+    }
+
+    @media(min-width: $dector-width){
+        width: 1050px;
+        margin: 0 auto;
+    }
+}
+
+.main-nav__list{
+    margin: 0 auto;
+    padding: 0;
+    list-style: none; 
+    line-height: 24px;
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+
+    @media(min-width: $table-width){
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 50px;
+        display: grid;
+        grid-template-columns: 320px 83px 265px;
+        grid-template-areas:
+        "logo search basket"
+        "catalog order delivery";
+    }
+
+    @media(min-width: $dector-width){
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 10px;
+        grid-template-areas:
+        "catalog order logo search basket"
+        "new sale . . delivery";
+    }
+}
+
+.main-nav__item{
+    @media(max-width: $mobile-width-only){
+        padding: 30px 0 30px 46px;
+        border-bottom: 1px solid #ececec;
+    }
+}
+
+.main-nav__link{
+    color: #000000;
+    text-decoration: none;
+    display: block;
+}
+
+.main-nav__item--catalog{
+    grid-area: catalog;
+    @media(min-width: $table-width) and (max-width: $dector-width){
+        font-size: 15px;
+    }
+}
+
+.main-nav__item--order{
+    grid-area: order;
+    @media(min-width: $table-width) and (max-width: $dector-width){
+        font-size: 15px;
+    }
+}
+
+.main-nav__item--logo{
+    grid-area: logo;
+    position: relative;
+    @media(max-width: $mobile-width-only){        
+        padding: 21px 0 21px 100px;
+        order: -1;
+        display: flex;
+    }
+}
+
+//Работа меню в тел. формате
+@media(max-width: $mobile-width-only){
+    .main-nav--close{
+        .main-nav__item--hide{
+            display: none;
+        }
+        .main-nav__toggle{
+            position: absolute;
+            top: 32px;
+            right: 30px;
+            width: 20px;
+            height: 14px;
+            cursor: pointer;
+            &::before{
+                content: "";
+                position: absolute;
+                top: 2px;
+                right: 0px;
+                width: 20px;
+                height: 2px;
+                background-color: #000000;
+                box-shadow: 0 4px 0 0 #000000,
+                            0 8px 0 0 #000000;
+                cursor: pointer;
+            }
+        }
+    }
+    
+    .main-nav--open{
+        .main-nav__toggle{
+            position: absolute;
+            top: 28px;
+            right: 30px;
+            width: 21px;
+            height: 21px;
+            cursor: pointer;
+            &::before,
+            &::after{        
+                content: "";
+                position: absolute;
+                top: 10px;
+                left: -5px;
+                width: 31px;
+                height: 2px;
+                background-color: #000000;
+            }
+            &::before{
+                transform: rotate(45deg);
+            }
+            &::after{
+                transform: rotate(-45deg);
+            }
+        }
+    }
+    
+    .main-nav--nojs{
+        .main-nav__toggle{
+            display: none;
+        }    
+        .main-nav__item--hide{
+            display: block;
+        }
+    }
+}
+
+
+.main-nav__item--search{        
+    @media(min-width: $table-width){
+        outline: 1px solid tomato;
+    }
+    grid-area: search;
+}
+
+.main-nav__span--search{    
+    @media(min-width: $table-width){
+        display: none;
+    }
+}
+
+.main-nav__item--basket{
+    grid-area: basket;
+}
+
+.main-nav__item--new{
+    grid-area: new;
+}
+
+.main-nav__item--sale{
+    grid-area: sale;
+}
+
+.main-nav__item--delivery{
+    grid-area: delivery;
+    font-family: "OpenSans", Arial, sans-serif;
+    font-size: 15px;
+}
+
+.main-nav__toggle{
+    @media(min-width: $table-width){
+        display: none;
+    }
+}
+
+.main-nav__item--mobile{
+    @media(max-width: $mobile-width-only){
+        display: none;
+    }
+}
+
+.main-nav__item--table{
+    @media(min-width: $table-width) and (max-width: $dector-width){
+        display: none;
+    }
+}

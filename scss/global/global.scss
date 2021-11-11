@@ -1,0 +1,35 @@
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0)
+}
+
+.page{
+    font-family: "OpenSansBold", Arial, sans-serif;
+    height: 100%;
+    font-size: 17px;
+    line-height: 27px;
+}
+
+.page__body{
+    min-height: 100%;
+    margin: 0;
+}
+
+.button {
+    font: inherit;
+  
+    font-size: 18px;
+    line-height: 24px;
+  
+    text-align: center;
+    color: #000000;
+    vertical-align: middle;
+    border: none;
+    background-color: white;
+  }

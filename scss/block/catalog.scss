@@ -1,0 +1,49 @@
+.catalog{
+    width: 260px;
+    margin: 0 auto;
+    padding: 0 30px;
+    @media(min-width: $table-width){
+        width: 668px;
+    }
+    @media(min-width: $dector-width){
+        width: 1050px;
+    }
+}
+
+.catalog__list{
+    margin: 0 auto;
+    @media(min-width: $dector-width){
+        display: flex;
+        justify-content: space-between;
+    }
+
+}
+
+.catalog__description{
+    font-size: 17px;
+    line-height: 24px;
+    @media(min-width: $table-width){
+        font-size: 20px;
+        line-height: 24px;
+    }
+}
+
+.catalog__specifications{
+    font-size: 13px;
+    line-height: 30px;
+    font-family: "OpenSans", Arial, sans-serif;
+    @media(min-width: $table-width){
+        font-size: 15px;
+        line-height: 30px;
+    }
+
+}
+
+.catalog__by-button{
+    font-size: 15px;
+    line-height: 24px;
+    @media(min-width: $table-width){
+        font-size: 17px;
+        line-height: 24px;
+    }
+}

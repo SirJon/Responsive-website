@@ -1,0 +1,79 @@
+.reviews{
+    width: 260px;
+    padding: 0 30px;
+    margin: 0 auto;
+    @media(min-width: $table-width){
+        width: 768px;
+        display: grid;
+        grid-template-areas:
+        "title write-reviews"
+        "quote quote"
+        "namee leaf-through"
+        "inst-name leaf-through";
+    }
+    @media(min-width: $dector-width){
+        width: 875px;
+    }
+}
+
+.reviews__title{
+    margin: 0;
+    padding: 0;
+    grid-area: title;
+}
+
+.reviews__quote{
+    margin: 0;
+    padding: 0;
+    grid-area: quote;
+    font-size: 15px;
+    line-height: 30px;    
+    font-family: "OpenSans", Arial, sans-serif;
+    @media(min-width: $table-width){
+        font-size: 17px;
+        line-height: 30px;
+    }
+}
+
+.reviews__name{
+    grid-area: namee;    
+    font-size: 15px;
+    line-height: 24px;
+    font-style: normal;
+    @media(min-width: $table-width){
+        font-size: 17px;
+        line-height: 24px;
+    }
+}
+
+.reviews__inst-name{
+    text-decoration: none;    
+    font-size: 15px;
+    line-height: 24px;
+    font-family: "OpenSans", Arial, sans-serif;
+    @media(min-width: $table-width){
+        font-size: 17px;
+        line-height: 24px;
+    }
+    @media(max-width: $mobile-width-only){
+        display: block;
+    }
+    color: #000000;
+    grid-area: inst-name;
+}
+
+.reviews__leaf-through{
+    grid-area: leaf-through;
+}
+
+.reviews__write-reviews{    
+    text-decoration: none;     
+    font-size: 18px;
+    line-height: 20px;
+    @media(min-width: $table-width){
+        font-size: 17px;
+        line-height: 20px;
+    }
+    color: #000000;
+    grid-area: write-reviews;
+}
