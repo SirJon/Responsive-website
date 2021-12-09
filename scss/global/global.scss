@@ -18,7 +18,24 @@
 
 .page__body{
     min-height: 100%;
+    margin: 0 auto;
+}
+
+.page-main__title{
     margin: 0;
+    padding: 0;
+    font-size: 27px;
+    line-height: 30px;
+    @media(min-width: $table-width){
+        font-size: 43px;
+        line-height: 50px;
+        margin-top: -40px;
+    }
+    @media(min-width: $dector-width){
+        font-size: 53px;
+        line-height: 57px;
+        margin-top: -45px;
+    }
 }
 
 .button {

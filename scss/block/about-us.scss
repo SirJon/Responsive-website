@@ -1,30 +1,69 @@
 .about-us{
-    margin: 0 auto;
-    padding: 0 30px;
-    @media(max-width: $mobile-width-only){
-        width: 260px;
-    }
+    margin: 0 auto 55px;
+    padding: 0;
+    width: 320px;
     @media(min-width: $table-width){
-        width: 668px;
+        width: 768px;
     }
     @media(min-width: $dector-width){
-        width: 700px;
+        width: 1250px;
     }
 }
 
 .about-us__title{
-    margin: 0;
-    padding: 0;
+    margin: 0 30px 20px;
+    padding: 0;    
+    @media(min-width: $table-width){
+        margin: 0 50px 35px;
+    }
+    @media(min-width: $dector-width){
+        margin: 0 275px 35px;
+    }
 }
 
 .about-us__list{
     list-style: none;
-    margin: 0;
+    margin: 0 30px;
     padding: 0;
     @media(min-width: $table-width){
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        margin: 0 50px;
+        display: flex;
+        flex-wrap: wrap;
+    }    
+    @media(min-width: $dector-width){
+        margin: 0 275px;
     }
+}
+
+.about-us__item{
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 25px;
+    @media(min-width: $table-width){
+        max-width: 334px;
+        margin: 0 0 55px;
+    }
+    @media(min-width: $dector-width){
+        max-width: 350px;
+    }
+}
+
+.about-us__img{
+    width: 34px;
+    margin: 0 0 10px;
+    @media(min-width: $table-width){
+        margin: 0 0 15px;
+    }
+}
+
+.about-us__img--money{
+    width: 46px;
+}
+
+.about-us__img--rocket{
+    width: 55px;
+    position: relative;
+    left: -6px;
 }
 
 .about-us__span{

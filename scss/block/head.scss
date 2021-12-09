@@ -3,28 +3,63 @@
     margin: 0 auto;
     padding: 0;
     @media(min-width: $table-width){
-        width: 668px;
+        width: 768px;
         margin: 0 auto;
+        background-image: url(../img/header-image@2x.jpg);
+        background-size: cover;
+        background-position: 50% 0;
     }
 
     @media(min-width: $dector-width){
-        width: 1050px;
+        width: 1150px;
         margin: 0 auto;
+    }
+
+    //Волнистые линии
+    position: relative;
+    @media(min-width: $table-width){
+        &::after{
+            content: url("../icons/wave-header-tablet.svg");
+            position: absolute;
+            width: 768px;
+            bottom: -8px;
+            left: 0;
+        }
+    }
+    @media(min-width: $dector-width){
+        &::after{
+            content: url("../icons/wave-header-desktop.svg");
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+        }
     }
 }
 
-.page-main__title{
-    margin: 0;
-    padding: 0;
-    font-size: 27px;
-    line-height: 30px;
+.head__title--index{
+    @media(max-width: $mobile-width-only){
+        background-image: url(../img/hero-mobile@2x.jpg);
+        background-size: cover;
+        padding: 75px 22px 120px;
+    }
     @media(min-width: $table-width){
-        font-size: 43px;
-        line-height: 50px;
+        padding: 155px 0 370px;
     }
     @media(min-width: $dector-width){
-        font-size: 53px;
-        line-height: 57px;
+        padding: 155px 0 370px;
+    }
+    text-align: center;
+}
+
+.head__title{
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 70px 0;
+    @media(min-width: $table-width){
+        padding: 100px 0 80px;
+    }
+    @media(min-width: $dector-width){
+        padding: 100px 0;
     }
 }
 
@@ -33,20 +68,55 @@
     padding: 0;
     list-style: none;
     @media(min-width: $table-width){
+        min-height: 125px;
+        margin: 0 100px;
         display: flex;
+        align-items: flex-end;
     }
 }
 
 .head__item{
     font-size: 19px;
     line-height: 24px;
+    padding: 26px 30px;
+    position: relative;
+    box-sizing: border-box;
     @media(min-width: $table-width){
         font-size: 20px;
         line-height: 30px;
+        padding-bottom: 34px;
+        flex-basis: 50%;
+        &:hover{        
+            .head__link{
+                padding-bottom: 5px;
+                display: inline-block;
+            }
+        }
     }
 }
 
-.head__item a{
-    color: #000000;
+.head__item--lamp{
+    background-color: #63d1bb;
+}
+
+.head__item--toys{
+    background-color: #56c3b2;
+}
+
+.head__link{
+    color: #ffffff;
     text-decoration: none;
+    &:focus{
+        opacity: 0.3;
+    }
+}
+
+.head__img{
+    position: absolute;
+    top: 26px;
+    right: 30px;
+}
+
+.head__img--toys{
+    right: 20px;
 }

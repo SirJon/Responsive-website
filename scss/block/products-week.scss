@@ -1,31 +1,69 @@
 .products-week{
-    margin: 0 auto;
-    padding: 0 30px;
-    width: 260px;
+    margin: 30px auto 75px;
+    width: 320px;
+    position: relative;
     @media(min-width: $table-width){
-        width: 668px;        
-        margin: 0 auto;        
+        width: 768px;        
+        margin: 0 auto 120px;
+    }
+
+    @media(min-width: $dector-width){
+        width: 1250px;
+        margin: 70px auto 160px;
+        padding: 0;
+    }
+    &::after{
+        content: url("../icons/wave-mobile-line.svg");
+        position: absolute;
+        bottom: -45px;
+        left: 0;
+        @media(min-width: $table-width){
+            content: url("../icons/wave-tablet.svg");
+            position: absolute;
+            bottom: -80px;
+            left: 0;
+        }
+        @media(min-width: $dector-width){
+            content: url("../icons/wave-desktop.svg");
+            position: absolute;
+            bottom: -110px;
+            left: 100px;
+        }
+    }
+}
+
+.products-week__wrapper--flex{
+    @media(min-width: $table-width){
+        display: flex;
+        justify-content: space-between;
+        margin: 50px 50px;
+    }
+    @media(min-width: $dector-width){
+        display: grid;
+        grid-template-columns: 175px 1fr;
+        grid-template-areas:
+        "info title";
+        margin: 55px 100px 50px;
+    }
+}
+
+.products-week__wrapper--grid{
+    @media(min-width: $table-width){
+        margin: 0 50px;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-areas: 
-        "title info"
+        grid-column-gap: 40px;
+        grid-template-areas:
         "description img"
         "tablee img"
         "cost img"
         "button img";
     }
-
     @media(min-width: $dector-width){
-        width: 1050px;
-        margin: 0 auto;
-        padding: 0 50px;
-        grid-template-columns: minmax(auto, 175px) minmax(auto, 350px) minmax(auto, 525px);
-        grid-template-areas: 
-        "info title img"
-        ". description img"
-        ". tablee img"
-        ". cost img"
-        ". button img";
+        margin: 0 100px;
+        display: flex;
+        margin: 0 683px 0 275px;
+        flex-direction: column;
     }
 }
 
@@ -45,71 +83,156 @@
 .products-week__title{
     grid-area: title; 
     margin: 0;
-    padding: 0;
+    padding: 0 30px;
+    @media(min-width: $table-width){
+        flex-grow: 3;
+        padding: 0;
+    }    
+    @media(min-width: $dector-width){
+        margin: 0 0 0 -4px;
+    }
 }
 
 .products-week__info{
     grid-area: info;
-    padding: 0;
+    padding: 0 30px;
     margin: 0;
     font-size: 17px;
     line-height: 17px;
     text-transform: uppercase;
     color: #63d1bb;
+    @media(min-width: $table-width){
+        flex-grow: 1;
+        padding: 15px 20px 0 55px;
+        text-align: center;
+        width: 90px;
+    }
+    @media(min-width: $dector-width){
+        order: -1;
+        padding: 18px 0 0 0;
+        width: 90px;
+        margin: 0 auto;
+        flex-grow: 0;
+    }
 }
 
 .products-week__description{
     grid-area: description;
-    padding: 0;
-    margin: 0;
-    font-family: "OpenSansBold", Arial, sans-serif;
+    padding: 0 30px;
+    margin: 30px 0 0;
+    opacity: 0.75;
+    font-family: "OpenSans", Arial, sans-serif;
     font-size: 15px;
     line-height: 24px;
     @media(min-width: $table-width){
         font-size: 17px;
         line-height: 30px;
+        padding: 0;
+        margin: 0;
+    }
+    @media(min-width: $dector-width){
+        margin-bottom: 50px;
     }
 }
 
 .products-week__table{
     grid-area: tablee;
-    padding: 0;
-    margin: 0;
-    font-family: "OpenSansBold", Arial, sans-serif;
+    opacity: 0.75;
+    padding: 0 30px;
+    margin: 25px 0 0;
+    width: 100%;    
+    border-spacing: 0 16px;
     font-size: 15px;
     line-height: 20px;
+    font-family: "OpenSans", Arial, sans-serif;
     @media(min-width: $table-width){
         font-size: 17px;
         line-height: 30px;
+        padding: 0;
+    }
+    @media(min-width: $dector-width){
+        margin: 0 0 70px 0;
+    }
+}
+
+.products-week__tbody{
+    margin: 0;
+    padding: 0;
+}
+
+.products-week__line{
+    position: relative;
+    &::after{
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 260px;
+        height: 1px;
+        background-color: #ececec;
+        @media(min-width: $dector-width){
+            width: 292px;
+        }
+
     }
 }
 
 .products-week__img{
     grid-area: img;
     padding: 0;
-    margin: 0;
+    margin: 30px 30px 0;
+    width: 260px;
+    @media(min-width: $table-width){
+        width: 334px;
+        margin: 0;
+    }
+    @media(min-width: $dector-width){
+        width: 525px;
+        position: absolute;
+        top: -50px;
+        right: 100px;
+        z-index: -1;
+    }
 }
 
 .products-week__cost{
     grid-area: cost;
     padding: 0;
-    margin: 0;
-    @media(max-width: $mobile-width-only){
-        display: block;
-    }
+    margin: 25px 0;
+    text-align: center;
+    opacity: 0.75;
+    display: block;
     font-size: 17px;
     line-height: 24px;
     @media(min-width: $table-width){
         font-size: 20px;
         line-height: 24px;
+        padding: 0;
+    }
+    @media(min-width: $dector-width){
+        margin: 0 0 30px 0;
     }
 }
 
 .products-week__button{
     grid-area: button;
-    padding: 0;
-    margin: 0;
+    padding: 15px 0;
+    margin: 0 30px;
     font-size: 17px;
     line-height: 20px;
     text-transform: uppercase;
+    width: 260px;
+    box-sizing: border-box;
+    border: 2px solid #444444;
+    &:hover{
+        background-color: rgba(0, 0, 0, 0.75);
+        color: #ffffff;
+    }
+    &:focus{
+        color: rgb(124, 124, 124);
+    }
+    @media(min-width: $table-width){
+        margin: 0;
+        width: auto;
+    }
 }

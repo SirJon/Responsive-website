@@ -13,10 +13,9 @@
         "write-us write-us";
     }
     @media(min-width: $dector-width){
-        width: 1100px;
+        width: 1050px;
         grid-template-columns: minmax(auto, 175px) minmax(auto, 350px) minmax(auto, 525px);
         grid-template-areas:
-        ". . map"
         "img title map"
         ". contacts__list map"
         ". write-us map";
@@ -24,7 +23,7 @@
 }
 
 .contacts__title{
-    margin: 0;
+    margin: 0 30px 35px;
     padding: 0;
     grid-area: title;
     font-size: 18px;
@@ -37,13 +36,23 @@
         font-size: 53px;
         line-height: 57px;
     }
+    @media(min-width: $dector-width){
+        margin: 50px 0;
+    }
 }
 
 .contacts__img{
+    grid-area: img;
     @media(max-width: $mobile-width-only){
         display: none;
     }
-    grid-area: img;
+    @media(min-width: $table-width){
+        margin: 0 50px 35px auto;
+    }
+    @media(min-width: $dector-width){
+        margin: 50px 0;
+        justify-self: center;
+    }
 }
 
 .contacts__list{
@@ -51,12 +60,17 @@
     font-size: 15px;
     line-height: 30px;
     font-family: "OpenSans", Arial, sans-serif;
+    margin: 0 30px 35px;
     @media(min-width: $table-width){
         font-size: 17px;
         line-height: 30px;
+        margin: 0 50px 60px;
     }
     @media(min-width: $table-width) and (max-width: $dector-width){
         display: flex;
+    }    
+    @media(min-width: $dector-width){
+        margin: 0 20px 70px 0;
     }
 }
 
@@ -64,24 +78,66 @@
     display: flex;
 }
 
-.contacts__personal-data a{    
+.contacts__feature{
+    margin: 0 0 35px;
+}
+
+.contacts__personal-data{
+    margin-left: 20px;
+}
+
+.contacts__email{    
     text-decoration: none;
     color: #000000;
+    border-bottom: 1px solid #62d1ba;
+    padding: 0 0 2px;
+    &:hover{
+        color: #62d1ba;
+    }
+    &:focus{
+        opacity: 0.1;
+        border-bottom: 1px solid #effaf8;
+    }
 }
 
 .contacts__map{
     grid-area: map;
-    width: 100%;
+    overflow: hidden;
+    margin: 0 0 35px;
+    @media(min-width: $table-width){
+        margin: 0 0 60px;
+    }    
+    @media(min-width: $dector-width){
+        margin: 0;
+    }
 }
 
-.contacts__write-us{    
+.contacts__write-us{
+    grid-area: write-us;
     font-size: 17px;
     line-height: 20px;
     text-transform: uppercase;
     text-decoration: none;
     color: #000000;
+    margin: 0 auto 35px;
+    padding: 14px 0;
+    width: 260px;
+    box-sizing: border-box;
+    border: 2px solid #444444;
+    &:hover{
+        background-color: rgba(0, 0, 0, 0.75);
+        color: #ffffff;
+    }
+    &:focus{
+        color: rgb(124, 124, 124);
+    }    
     @media(max-width: $mobile-width-only){
         display: block;
     }
-    grid-area: write-us;
+    @media(min-width: $table-width){
+        width: 230px;
+    }    
+    @media(min-width: $dector-width){
+        margin-left: 0;
+    }
 }
